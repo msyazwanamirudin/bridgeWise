@@ -1,310 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bridge Wise | 1-Year UK Top-Up Degree for Malaysian Diploma Holders</title>
-<meta name="description" content="Turn your Malaysian diploma into a UK Bachelor's degree in 1 year. Guardian Top 30 university, £6,000 automatic scholarship, IELTS waiver, instalment plans, and free flight for the Sept/Oct intake.">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridge Wise | University of Sunderland UK Agent</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Hides inactive pages */
+    .page { display: none; }
+    .page.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </head>
-<body>
+<body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
 
-<div class="topbar">
-  <div class="wrap">
-    <span class="topbar-item">Sept &amp; Oct 2026 intake now open &mdash; <a href="apply.html">check eligibility</a></span>
-    <span class="topbar-item">Agent enquiries &mdash; <a href="partner.html">earn commission</a></span>
-  </div>
-</div>
-
-<header class="nav">
-  <div class="wrap">
-    <a href="index.html" class="brand">
-      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M3 27C3 27 10 15 20 15C30 15 37 27 37 27" stroke="#10233F" stroke-width="3" stroke-linecap="round"/>
-        <path d="M3 27C3 27 10 15 20 15C30 15 37 27 37 27" stroke="#C89B3C" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7" transform="translate(0,-1)"/>
-        <circle cx="3" cy="30" r="3" fill="#10233F"/>
-        <circle cx="37" cy="30" r="3" fill="#C89B3C"/>
-      </svg>
-      <span>
-        <span class="brand-name">Bridge Wise</span>
-        <span class="brand-tag">UK Top-Up Degree Recruitment</span>
-      </span>
-    </a>
-    <nav class="nav-links" id="nav-links">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="programs.html">Programs</a>
-      <a href="apply.html">Apply</a>
-      <a href="partner.html">Partner With Us</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="apply.html" class="btn btn-outline">Check Eligibility</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </button>
+  <!-- Shared Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+      <a href="#home" class="text-2xl font-bold text-indigo-900 tracking-tight">Bridge<span class="text-amber-500">Wise</span></a>
+      <nav class="flex gap-4 md:gap-6 text-sm font-semibold text-slate-600">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#programs" class="hover:text-indigo-600">Programs</a>
+        <a href="#apply" class="hover:text-indigo-600">Apply Now</a>
+        <a href="#partner" class="hover:text-indigo-600">Partner With Us</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <a href="https://wa.me/60123456789" target="_blank" class="hidden md:flex bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold items-center gap-2 hover:bg-emerald-600">
+        <i class="fa-brands fa-whatsapp"></i> Chat Now
+      </a>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- ============ HERO : dual conversion ============ -->
-<section class="hero" style="padding:0;">
-  <svg class="bridge-path" viewBox="0 0 1180 520" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M-50 420 C 250 250, 450 250, 590 300 S 950 420, 1230 220" stroke="#C89B3C" stroke-width="1.5" fill="none" opacity="0.35"/>
-    <path d="M-50 480 C 300 350, 500 380, 650 340 S 980 480, 1230 300" stroke="#1D4E89" stroke-width="1.5" fill="none" opacity="0.35"/>
-  </svg>
+  <!-- Main Content Area -->
+  <main class="flex-grow">
 
-  <div class="hero-top">
-    <div class="wrap">
-      <span class="hero-kicker">Guardian 2026 Top 30 UK University</span>
-      <h1>One Malaysian diploma. <em>One year.</em> One UK Bachelor's degree.</h1>
-      <p class="hero-sub">Bridge Wise is an authorised recruitment agent placing Malaysian diploma holders into the University of Sunderland's 1-Year Top-Up degree &mdash; with a guaranteed £6,000 scholarship, IELTS waiver, and instalment plans built for local budgets.</p>
-      <div style="display:flex; align-items:center; gap:12px; margin-top:26px;">
-        <span style="font-size:12px; color:rgba(250,247,240,0.55); font-weight:600;">Authorised recruitment agent for</span>
-        <img src="assets/img/sunderland-logo-placeholder.svg" alt="University of Sunderland" style="filter:invert(1) brightness(1.6); height:34px; width:auto;">
+    <!-- 1. HOME PAGE -->
+    <section id="home" class="page active">
+      <div class="bg-indigo-900 text-white py-16 px-6 text-center">
+        <span class="bg-amber-400 text-indigo-950 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">🎓 Attention Malaysian Diploma Holders</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold mt-6 max-w-4xl mx-auto leading-tight">Complete your UK Honours Degree in just 1 Year.</h1>
+        <p class="mt-4 text-indigo-200 text-lg">University of Sunderland – Top 30 UK University (Guardian 2026).</p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#apply" class="bg-amber-500 hover:bg-amber-600 text-indigo-950 font-bold py-3 px-8 rounded-xl shadow-lg transition">Apply as Student</a>
+          <a href="#partner" class="bg-white hover:bg-slate-100 text-indigo-900 font-bold py-3 px-8 rounded-xl shadow-lg transition">Join as Sub-Agent</a>
+        </div>
       </div>
-    </div>
-  </div>
+      <div class="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-money-bill-wave text-3xl text-emerald-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">£6,000 Scholarship</h3>
+          <p class="text-slate-600 text-sm">Automatic guaranteed grant for eligible Malaysian students upon successful application.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-plane-departure text-3xl text-blue-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">Free Flight Ticket</h3>
+          <p class="text-slate-600 text-sm">Exclusive offer for our Sept/Oct 2026 intake. Fly to the UK on us!</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-file-contract text-3xl text-amber-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">No IELTS Required</h3>
+          <p class="text-slate-600 text-sm">IELTS waiver available for qualifying Malaysian diploma holders.</p>
+        </div>
+      </div>
+    </section>
 
-  <div class="hero-split">
-    <div class="wrap">
-      <div class="hero-panel">
-        <span class="hero-panel-label">FOR STUDENTS</span>
-        <h3>Finish your UK degree in 12 months</h3>
-        <p>Check which track your diploma qualifies for and get your scholarship offer, no walk-in required.</p>
-        <a href="apply.html" class="btn btn-gold">Start My Application</a>
-      </div>
-      <div class="hero-panel">
-        <span class="hero-panel-label">FOR AGENTS &amp; COUNSELLORS</span>
-        <h3>Refer students, earn per enrolment</h3>
-        <p>Register as a Bridge Wise sub-agent, get your own referral link, and track every student you bring in.</p>
-        <a href="partner.html" class="btn btn-outline-light">Become a Partner</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ VALUE STRIP ============ -->
-<section class="value-strip" style="padding:0;">
-  <div class="wrap">
-    <div class="value-grid">
-      <div class="value-item">
-        <span class="num">£6,000</span>
-        <span class="label">Automatic scholarship, applied to every eligible applicant &mdash; no separate essay or interview</span>
-      </div>
-      <div class="value-item">
-        <span class="num">No IELTS</span>
-        <span class="label">Waiver available for eligible diploma holders &mdash; ask us if your programme qualifies</span>
-      </div>
-      <div class="value-item">
-        <span class="num">0% Plan</span>
-        <span class="label">Tuition instalment plans so you're not paying the full year up front</span>
-      </div>
-      <div class="value-item">
-        <span class="num">Free Flight</span>
-        <span class="label">One-way ticket to the UK included for the September/October intake</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROGRAM GRID ============ -->
-<section id="tracks">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Six tracks, one shared route into the UK</h2>
-      <p>Your Diploma major decides which Top-Up track you enter &mdash; the course table on the Programs page maps every diploma to its matching degree.</p>
-    </div>
-    <div class="track-grid">
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
-        <h3>Hospitality Management</h3>
-        <p>For diploma holders in hotel, culinary, or tourism management moving into international hospitality leadership.</p>
-        <a href="programs.html#hospitality" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M6 21V10l6-5 6 5v11M10 21v-5h4v5"/></svg>
-        <h3>Business Management</h3>
-        <p>Top up a business, marketing, or accounting diploma into a BA (Hons) Business degree recognised across the UK.</p>
-        <a href="programs.html#business" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 3c2.5 2.7 2.5 14.3 0 18M12 3c-2.5 2.7-2.5 14.3 0 18M3.5 9h17M3.5 15h17"/></svg>
-        <h3>Art &amp; Design</h3>
-        <p>For diploma graduates in graphic design, fashion, or fine art building a UK-accredited creative portfolio degree.</p>
-        <a href="programs.html#art-design" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
-        <h3>Computing</h3>
-        <p>Top up an IT, software engineering, or computer science diploma into a BSc (Hons) Computing degree.</p>
-        <a href="programs.html#computing" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
-        <h3>Engineering</h3>
-        <p>For mechanical, electrical, or civil diploma holders finishing a BEng (Hons) at a Guardian Top 30 institution.</p>
-        <a href="programs.html#engineering" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-      <div class="track-card">
-        <svg class="track-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.6-9.3-9C1.2 8.6 3 5 6.6 5c2 0 3.4 1.2 4.4 2.5M12 21s7-4.6 9.3-9C22.8 8.6 21 5 17.4 5c-2 0-3.4 1.2-4.4 2.5"/><path d="M12 7.5V12M9.5 9.5H14"/></svg>
-        <h3>Nursing</h3>
-        <p>A route for nursing diploma holders progressing into a UK BSc (Hons) Nursing top-up, subject to clinical entry rules.</p>
-        <a href="programs.html#nursing" class="track-link">View course breakdown &rarr;</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ JOURNEY ============ -->
-<section class="section-alt">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>How the 1-Year Top-Up actually works</h2>
-      <p>Three stages, start to finish &mdash; from your Malaysian diploma to a UK-conferred Bachelor's degree.</p>
-    </div>
-    <div class="journey">
-      <div class="journey-step">
-        <div class="dot">1</div>
-        <h4>Your Malaysian Diploma</h4>
-        <p>Complete or hold a recognised Diploma in a matching field. Bridge Wise checks your transcript against Sunderland's entry rules before you apply.</p>
-      </div>
-      <div class="journey-step">
-        <div class="dot">2</div>
-        <h4>1 Year at Sunderland, UK</h4>
-        <p>Your diploma is credited toward the final year of the Bachelor's. You study on campus in the UK for one academic year, not three.</p>
-      </div>
-      <div class="journey-step">
-        <div class="dot">3</div>
-        <h4>UK Bachelor's Degree</h4>
-        <p>Graduate with a full Honours degree from a Guardian 2026 Top 30 UK university &mdash; the same qualification as a 3-year student.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section>
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Students who made the jump</h2>
-      <p>A few of the diploma holders Bridge Wise has placed into the UK Top-Up route.</p>
-    </div>
-    <div class="testi-grid">
-
-      <div class="testi-card">
-        <p class="testi-quote">"I was worried a 1-year top-up meant a 'lesser' degree. It's not &mdash; my certificate says Sunderland, same as a 3-year student. The scholarship covered nearly two semesters of tuition."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-eng.jpg" alt="Portrait of Amirul, Mechanical Engineering Top-Up student">
+    <!-- 2. PROGRAMS PAGE -->
+    <section id="programs" class="page">
+      <div class="max-w-5xl mx-auto py-12 px-6">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-2">1-Year Top-Up Programmes</h2>
+        <p class="text-slate-600 mb-8">Turn your Malaysian Diploma into a full UK Honours Degree.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Courses -->
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-briefcase mr-2"></i>Business & Management</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-laptop-code mr-2"></i>Computing & IT</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-gears mr-2"></i>Engineering</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-utensils mr-2"></i>Hospitality & Tourism</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-palette mr-2"></i>Art & Design</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-user-nurse mr-2"></i>Nursing</h3></div>
+        </div>
+        <div class="mt-8 bg-indigo-50 border border-indigo-200 p-6 rounded-xl flex items-center justify-between">
           <div>
-            <div class="testi-name">Amirul, 23</div>
-            <div class="testi-role">Mechanical Engineering &middot; Diploma from German-Malaysian Institute</div>
+            <h3 class="font-bold text-indigo-900">Flexible Instalments Available</h3>
+            <p class="text-sm text-indigo-700">Don't let tuition fees hold you back. Contact us for custom payment plans.</p>
+          </div>
+          <a href="#apply" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold text-sm">Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. APPLY PAGE (Merged with Sub-agent Tracking) -->
+    <section id="apply" class="page">
+      <div class="max-w-2xl mx-auto py-10 px-6">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-6 text-center">Student Application</h2>
+        <form class="bg-white p-8 rounded-2xl shadow border border-slate-200 space-y-6">
+          <input type="hidden" id="referral_code" name="referral_code" value="">
+          <div id="referralBanner" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-4 py-3 rounded-lg font-medium">
+            <i class="fa-solid fa-check-circle mr-1 text-emerald-500"></i> Referred by Sub-Agent: <strong id="refCodeDisplay"></strong>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Full Name (As per IC)</label>
+            <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Email</label>
+              <input type="email" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">Phone / WhatsApp</label>
+              <input type="tel" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Select Program</label>
+            <select required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 bg-white">
+              <option value="">Select a Top-Up Degree...</option>
+              <option value="business">Business & Management</option>
+              <option value="computing">Computing</option>
+              <option value="engineering">Engineering</option>
+              <option value="hospitality">Hospitality & Tourism</option>
+              <option value="art">Art & Design</option>
+              <option value="nursing">Nursing</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Upload Diploma Transcript</label>
+            <input type="file" required class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+          </div>
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-md">Submit Application</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. PARTNER PAGE (Sub-Agent Registration) -->
+    <section id="partner" class="page">
+      <div class="max-w-4xl mx-auto py-12 px-6 text-center">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-4">Become a Bridge Wise Sub-Agent</h2>
+        <p class="text-slate-600 mb-10 max-w-2xl mx-auto">Earn competitive commissions for every successful student placement. You refer them via your unique link, we handle the application and visa process.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">1</div>
+            <h4 class="font-bold">Register</h4><p class="text-sm text-slate-500">Sign up and get your unique Agent Code.</p>
+          </div>
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">2</div>
+            <h4 class="font-bold">Share Link</h4><p class="text-sm text-slate-500">Send students to bridgewise.com/#apply?ref=YOURCODE.</p>
+          </div>
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">3</div>
+            <h4 class="font-bold">Earn Commission</h4><p class="text-sm text-slate-500">Get paid when your student successfully enrols.</p>
           </div>
         </div>
-      </div>
 
-      <div class="testi-card">
-        <p class="testi-quote">"The IELTS waiver was the deciding factor for me &mdash; I'd already sat for it twice. Bridge Wise's counsellor checked my eligibility over WhatsApp before I even paid the application fee."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-biz.jpg" alt="Portrait of Nur Athirah, Business Management Top-Up student">
-          <div>
-            <div class="testi-name">Nur Athirah, 22</div>
-            <div class="testi-role">Business Management &middot; Diploma from a Malaysian polytechnic</div>
+        <form class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow border border-slate-200 text-left space-y-4">
+          <h3 class="font-bold text-xl mb-4 border-b pb-2">Sub-Agent Registration</h3>
+          <div><label class="block text-sm font-semibold mb-1">Full Name / Agency Name</label><input type="text" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <div><label class="block text-sm font-semibold mb-1">WhatsApp Number</label><input type="text" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <div><label class="block text-sm font-semibold mb-1">Region / State</label><input type="text" placeholder="e.g. Selangor, Penang, Sabah" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-indigo-950 font-bold py-3 rounded-xl shadow-md mt-2">Request Agent Account</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT PAGE -->
+    <section id="contact" class="page">
+      <div class="max-w-4xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-extrabold text-indigo-900 mb-6">Get in Touch</h2>
+          <p class="text-slate-600 mb-8">Have questions about the £6,000 scholarship or the Sept/Oct 2026 intake? Drop by our office or WhatsApp us.</p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot text-indigo-600 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-slate-800">Bridge Wise Office</h4>
+                <p class="text-slate-500 text-sm">Seksyen 9, Bandar Baru Bangi<br>43650 Selangor, Malaysia</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-envelope text-indigo-600 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-slate-800">Email</h4>
+                <p class="text-slate-500 text-sm">admissions@bridgewise.com.my</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="testi-card">
-        <p class="testi-quote">"Instalments made it possible for my parents to say yes. We paid per semester instead of one lump sum, and the free flight for the September intake covered the one cost we hadn't budgeted for."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-comp.jpg" alt="Portrait of Danial, Computing Top-Up student">
-          <div>
-            <div class="testi-name">Danial, 24</div>
-            <div class="testi-role">Computing &middot; Diploma in Information Technology</div>
-          </div>
+        <div class="bg-white p-8 rounded-2xl shadow border border-slate-200">
+          <h3 class="font-bold text-xl mb-4">Send an Inquiry</h3>
+          <form class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 border rounded-lg" required>
+            <input type="tel" placeholder="Phone Number" class="w-full px-3 py-2 border rounded-lg" required>
+            <textarea placeholder="How can we help?" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
+            <button class="w-full bg-indigo-600 text-white font-bold py-2 rounded-lg">Send Message</button>
+          </form>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+  </main>
 
-<!-- ============ AGENT TEASER ============ -->
-<section class="section-alt">
-  <div class="wrap">
-    <div class="agent-band">
-      <div>
-        <h3>Already counselling students on UK pathways?</h3>
-        <p>Register as a Bridge Wise sub-agent, get a personal referral code, and earn commission on every student who enrols through your link.</p>
-      </div>
-      <div class="agent-band-cta">
-        <a href="partner.html" class="btn btn-gold">Register as an Agent</a>
+  <!-- Shared Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2026 Bridge Wise. Official Regional Recruiter for University of Sunderland.</p>
+      <div class="mt-4 md:mt-0 space-x-4">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#apply" class="hover:text-white">Apply</a>
+        <a href="#partner" class="hover:text-white">Agents</a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <div class="brand">
-          <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M3 27C3 27 10 15 20 15C30 15 37 27 37 27" stroke="#FAF7F0" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="3" cy="30" r="3" fill="#C89B3C"/>
-            <circle cx="37" cy="30" r="3" fill="#C89B3C"/>
-          </svg>
-          <span class="brand-name" style="color:#FAF7F0;">Bridge Wise</span>
-        </div>
-        <p>An authorised recruitment agent for the University of Sunderland's 1-Year Top-Up degree, working with Malaysian diploma holders and their counsellors.</p>
-      </div>
-      <div>
-        <h5>Site</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="apply.html">Apply</a></li>
-          <li><a href="partner.html">Partner With Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Tracks</h5>
-        <ul>
-          <li><a href="programs.html#hospitality">Hospitality</a></li>
-          <li><a href="programs.html#business">Business</a></li>
-          <li><a href="programs.html#computing">Computing</a></li>
-          <li><a href="programs.html#engineering">Engineering</a></li>
-          <li><a href="programs.html#nursing">Nursing</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Talk to us</h5>
-        <ul>
-          <li><a href="#" data-wa>WhatsApp +60 12-303 9697</a></li>
-          <li><a href="mailto:sssssyazwan@gmail.com">sssssyazwan@gmail.com</a></li>
-          <li><a href="contact.html">Office &amp; enquiry form</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>&copy; <span id="year"></span> Bridge Wise. Independent recruitment agent &mdash; not an official campus of the University of Sunderland.</span>
-      <span>Kuala Lumpur, Malaysia</span>
-    </div>
-  </div>
-</footer>
+  <!-- Single Page App Router Logic -->
+  <script>
+    function handleRouting() {
+      // Get hash from URL (e.g. "#apply?ref=123")
+      let fullHash = window.location.hash || '#home';
+      let pageId = fullHash.split('?')[0].replace('#', '');
+      
+      // Hide all pages, show target page
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      const targetPage = document.getElementById(pageId);
+      if(targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo(0, 0);
+      } else {
+        document.getElementById('home').classList.add('active'); // fallback
+      }
 
-<a href="#" class="wa-float" data-wa aria-label="Chat with Bridge Wise on WhatsApp">
-  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.01 3C9.38 3 4 8.38 4 15.01c0 2.35.65 4.55 1.78 6.43L4 29l7.76-1.73a11.9 11.9 0 0 0 4.25.78h.01c6.63 0 12-5.38 12-12.01C28.02 8.38 22.64 3 16.01 3zm0 21.82c-1.34 0-2.65-.29-3.83-.86l-.28-.14-4.6 1.02 1.05-4.48-.18-.29a9.7 9.7 0 0 1-1.5-5.06C6.67 9.53 10.9 5.3 16.01 5.3c2.47 0 4.79.97 6.53 2.72a9.17 9.17 0 0 1 2.7 6.5c0 5.11-4.23 9.3-9.23 9.3zm5.06-6.96c-.28-.14-1.64-.81-1.9-.9-.25-.1-.44-.14-.62.13-.18.28-.72.9-.88 1.08-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.37a8.35 8.35 0 0 1-1.54-1.92c-.16-.28-.02-.43.12-.57.13-.13.28-.32.42-.49.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.49-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47-.16-.01-.35-.01-.53-.01-.18 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s1 2.68 1.14 2.87c.14.18 1.97 3.01 4.77 4.22.67.29 1.19.46 1.6.59.67.21 1.28.18 1.76.11.54-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.11-.25-.18-.53-.32z"/></svg>
-</a>
+      // Referral Code Extractor logic (Only runs if on #apply page)
+      if (pageId === 'apply' && fullHash.includes('?ref=')) {
+        const refCode = fullHash.split('?ref=')[1].split('&')[0];
+        document.getElementById('referral_code').value = refCode;
+        document.getElementById('refCodeDisplay').textContent = refCode;
+        document.getElementById('referralBanner').classList.remove('hidden');
+      }
+    }
 
-<script src="assets/js/main.js"></script>
+    // Listen for clicks on navigation links
+    window.addEventListener('hashchange', handleRouting);
+    
+    // Run on initial load
+    window.addEventListener('DOMContentLoaded', handleRouting);
+  </script>
 </body>
 </html>

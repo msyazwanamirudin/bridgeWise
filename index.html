@@ -3,138 +3,248 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apply Now | Bridge Wise - University of Sunderland</title>
+  <title>Bridge Wise | University of Sunderland UK Agent</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Hides inactive pages */
+    .page { display: none; }
+    .page.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800">
+<body class="bg-slate-50 font-sans text-slate-800 flex flex-col min-h-screen">
 
-  <header class="bg-white border-b border-slate-200 py-4 px-6 sticky top-0 z-50">
-    <div class="max-w-4xl mx-auto flex justify-between items-center">
-      <a href="/" class="text-2xl font-bold text-indigo-900 tracking-tight">Bridge<span class="text-amber-500">Wise</span></a>
-      <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-2">
-        <i class="fa-brands fa-whatsapp text-lg"></i> Need Help? Chat Us
+  <!-- Shared Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+      <a href="#home" class="text-2xl font-bold text-indigo-900 tracking-tight">Bridge<span class="text-amber-500">Wise</span></a>
+      <nav class="flex gap-4 md:gap-6 text-sm font-semibold text-slate-600">
+        <a href="#home" class="hover:text-indigo-600">Home</a>
+        <a href="#programs" class="hover:text-indigo-600">Programs</a>
+        <a href="#apply" class="hover:text-indigo-600">Apply Now</a>
+        <a href="#partner" class="hover:text-indigo-600">Partner With Us</a>
+        <a href="#contact" class="hover:text-indigo-600">Contact</a>
+      </nav>
+      <a href="https://wa.me/60123456789" target="_blank" class="hidden md:flex bg-emerald-500 text-white px-4 py-2 rounded-lg text-sm font-bold items-center gap-2 hover:bg-emerald-600">
+        <i class="fa-brands fa-whatsapp"></i> Chat Now
       </a>
     </div>
   </header>
 
-  <section class="bg-indigo-900 text-white py-8 px-6 text-center">
-    <span class="bg-amber-400 text-indigo-950 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Intake Open 2026</span>
-    <h1 class="text-2xl md:text-3xl font-extrabold mt-3">University of Sunderland 1-Year Top-Up Application</h1>
-    <p class="text-indigo-200 text-sm mt-2">Guaranteed £6,000 Automatic Scholarship Applied Upon Eligibility Verification</p>
-  </section>
+  <!-- Main Content Area -->
+  <main class="flex-grow">
 
-  <main class="max-w-2xl mx-auto my-10 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-slate-100">
-    
-    <form id="applicationForm" action="/submit-application" method="POST" enctype="multipart/form-data" class="space-y-6">
-      
-      <input type="hidden" id="referral_code" name="referral_code" value="">
-
-      <div id="referralBanner" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium px-4 py-3 rounded-lg flex items-center gap-2">
-        <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i>
-        <span>Referral Applied: <strong id="refCodeDisplay" class="font-bold"></strong></span>
-      </div>
-
-      <div>
-        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-user text-indigo-600 mr-2"></i>Personal Details</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1" for="full_name">Full Name (As per IC/Passport) *</label>
-            <input type="text" id="full_name" name="full_name" required placeholder="e.g. Tan Wei Ming" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-          <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1" for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required placeholder="name@example.com" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
-          <div class="md:col-span-2">
-            <label class="block text-xs font-semibold text-slate-700 mb-1" for="phone">WhatsApp / Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="+60 12-345 6789" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
-          </div>
+    <!-- 1. HOME PAGE -->
+    <section id="home" class="page active">
+      <div class="bg-indigo-900 text-white py-16 px-6 text-center">
+        <span class="bg-amber-400 text-indigo-950 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">🎓 Attention Malaysian Diploma Holders</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold mt-6 max-w-4xl mx-auto leading-tight">Complete your UK Honours Degree in just 1 Year.</h1>
+        <p class="mt-4 text-indigo-200 text-lg">University of Sunderland – Top 30 UK University (Guardian 2026).</p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#apply" class="bg-amber-500 hover:bg-amber-600 text-indigo-950 font-bold py-3 px-8 rounded-xl shadow-lg transition">Apply as Student</a>
+          <a href="#partner" class="bg-white hover:bg-slate-100 text-indigo-900 font-bold py-3 px-8 rounded-xl shadow-lg transition">Join as Sub-Agent</a>
         </div>
       </div>
+      <div class="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-money-bill-wave text-3xl text-emerald-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">£6,000 Scholarship</h3>
+          <p class="text-slate-600 text-sm">Automatic guaranteed grant for eligible Malaysian students upon successful application.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-plane-departure text-3xl text-blue-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">Free Flight Ticket</h3>
+          <p class="text-slate-600 text-sm">Exclusive offer for our Sept/Oct 2026 intake. Fly to the UK on us!</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-center">
+          <i class="fa-solid fa-file-contract text-3xl text-amber-500 mb-4"></i>
+          <h3 class="font-bold text-lg mb-2">No IELTS Required</h3>
+          <p class="text-slate-600 text-sm">IELTS waiver available for qualifying Malaysian diploma holders.</p>
+        </div>
+      </div>
+    </section>
 
-      <div>
-        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-graduation-cap text-indigo-600 mr-2"></i>Academic Selection</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- 2. PROGRAMS PAGE -->
+    <section id="programs" class="page">
+      <div class="max-w-5xl mx-auto py-12 px-6">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-2">1-Year Top-Up Programmes</h2>
+        <p class="text-slate-600 mb-8">Turn your Malaysian Diploma into a full UK Honours Degree.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Courses -->
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-briefcase mr-2"></i>Business & Management</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-laptop-code mr-2"></i>Computing & IT</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-gears mr-2"></i>Engineering</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-utensils mr-2"></i>Hospitality & Tourism</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-palette mr-2"></i>Art & Design</h3></div>
+          <div class="p-6 bg-white rounded-xl shadow border border-slate-200"><h3 class="font-bold text-lg text-indigo-700"><i class="fa-solid fa-user-nurse mr-2"></i>Nursing</h3></div>
+        </div>
+        <div class="mt-8 bg-indigo-50 border border-indigo-200 p-6 rounded-xl flex items-center justify-between">
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1" for="program">Intended Top-Up Program *</label>
-            <select id="program" name="program" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
-              <option value="">Select Course</option>
+            <h3 class="font-bold text-indigo-900">Flexible Instalments Available</h3>
+            <p class="text-sm text-indigo-700">Don't let tuition fees hold you back. Contact us for custom payment plans.</p>
+          </div>
+          <a href="#apply" class="bg-indigo-600 text-white px-6 py-2 rounded-lg font-bold text-sm">Apply Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. APPLY PAGE (Merged with Sub-agent Tracking) -->
+    <section id="apply" class="page">
+      <div class="max-w-2xl mx-auto py-10 px-6">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-6 text-center">Student Application</h2>
+        <form class="bg-white p-8 rounded-2xl shadow border border-slate-200 space-y-6">
+          <input type="hidden" id="referral_code" name="referral_code" value="">
+          <div id="referralBanner" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs px-4 py-3 rounded-lg font-medium">
+            <i class="fa-solid fa-check-circle mr-1 text-emerald-500"></i> Referred by Sub-Agent: <strong id="refCodeDisplay"></strong>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Full Name (As per IC)</label>
+            <input type="text" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1">Email</label>
+              <input type="email" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1">Phone / WhatsApp</label>
+              <input type="tel" required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1">Select Program</label>
+            <select required class="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 bg-white">
+              <option value="">Select a Top-Up Degree...</option>
               <option value="business">Business & Management</option>
-              <option value="computing">Computing & IT</option>
+              <option value="computing">Computing</option>
               <option value="engineering">Engineering</option>
               <option value="hospitality">Hospitality & Tourism</option>
               <option value="art">Art & Design</option>
-              <option value="nursing">Nursing & Health</option>
+              <option value="nursing">Nursing</option>
             </select>
           </div>
           <div>
-            <label class="block text-xs font-semibold text-slate-700 mb-1" for="intake">Target Intake *</label>
-            <select id="intake" name="intake" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
-              <option value="sept_oct_2026">Sept/Oct 2026 (Includes Free Flight Offer)</option>
-              <option value="jan_2027">Jan/Feb 2027</option>
-            </select>
+            <label class="block text-sm font-semibold mb-1">Upload Diploma Transcript</label>
+            <input type="file" required class="w-full text-sm file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100">
+          </div>
+          <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-md">Submit Application</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. PARTNER PAGE (Sub-Agent Registration) -->
+    <section id="partner" class="page">
+      <div class="max-w-4xl mx-auto py-12 px-6 text-center">
+        <h2 class="text-3xl font-extrabold text-indigo-900 mb-4">Become a Bridge Wise Sub-Agent</h2>
+        <p class="text-slate-600 mb-10 max-w-2xl mx-auto">Earn competitive commissions for every successful student placement. You refer them via your unique link, we handle the application and visa process.</p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">1</div>
+            <h4 class="font-bold">Register</h4><p class="text-sm text-slate-500">Sign up and get your unique Agent Code.</p>
+          </div>
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">2</div>
+            <h4 class="font-bold">Share Link</h4><p class="text-sm text-slate-500">Send students to bridgewise.com/#apply?ref=YOURCODE.</p>
+          </div>
+          <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
+            <div class="bg-indigo-100 text-indigo-700 w-10 h-10 rounded-full flex items-center justify-center font-bold mx-auto mb-3">3</div>
+            <h4 class="font-bold">Earn Commission</h4><p class="text-sm text-slate-500">Get paid when your student successfully enrols.</p>
           </div>
         </div>
-      </div>
 
-      <div>
-        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-file-arrow-up text-indigo-600 mr-2"></i>Upload Transcripts (For Fast Review)</h2>
-        <p class="text-xs text-slate-500 mb-3">Upload your Diploma transcript to verify entry eligibility and IELTS waiver status.</p>
-        
-        <div class="border-2 border-dashed border-slate-300 rounded-lg p-4 text-center hover:bg-slate-50 transition cursor-pointer" onclick="document.getElementById('transcripts').click()">
-          <i class="fa-solid fa-cloud-arrow-up text-3xl text-indigo-500 mb-2"></i>
-          <p class="text-xs font-semibold text-slate-700">Click to upload Diploma Transcript / Passport</p>
-          <p class="text-[10px] text-slate-400 mt-1">PDF, PNG, or JPG (Max 10MB)</p>
-          <input type="file" id="transcripts" name="transcripts[]" multiple accept=".pdf,.png,.jpg,.jpeg" class="hidden" onchange="updateFileList(this)">
+        <form class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow border border-slate-200 text-left space-y-4">
+          <h3 class="font-bold text-xl mb-4 border-b pb-2">Sub-Agent Registration</h3>
+          <div><label class="block text-sm font-semibold mb-1">Full Name / Agency Name</label><input type="text" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <div><label class="block text-sm font-semibold mb-1">WhatsApp Number</label><input type="text" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <div><label class="block text-sm font-semibold mb-1">Region / State</label><input type="text" placeholder="e.g. Selangor, Penang, Sabah" class="w-full px-3 py-2 border rounded-lg" required></div>
+          <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-indigo-950 font-bold py-3 rounded-xl shadow-md mt-2">Request Agent Account</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT PAGE -->
+    <section id="contact" class="page">
+      <div class="max-w-4xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-10">
+        <div>
+          <h2 class="text-3xl font-extrabold text-indigo-900 mb-6">Get in Touch</h2>
+          <p class="text-slate-600 mb-8">Have questions about the £6,000 scholarship or the Sept/Oct 2026 intake? Drop by our office or WhatsApp us.</p>
+          
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-location-dot text-indigo-600 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-slate-800">Bridge Wise Office</h4>
+                <p class="text-slate-500 text-sm">Seksyen 9, Bandar Baru Bangi<br>43650 Selangor, Malaysia</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <i class="fa-solid fa-envelope text-indigo-600 text-xl mt-1"></i>
+              <div>
+                <h4 class="font-bold text-slate-800">Email</h4>
+                <p class="text-slate-500 text-sm">admissions@bridgewise.com.my</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="fileList" class="mt-2 text-xs text-slate-600 space-y-1"></div>
+        <div class="bg-white p-8 rounded-2xl shadow border border-slate-200">
+          <h3 class="font-bold text-xl mb-4">Send an Inquiry</h3>
+          <form class="space-y-4">
+            <input type="text" placeholder="Your Name" class="w-full px-3 py-2 border rounded-lg" required>
+            <input type="tel" placeholder="Phone Number" class="w-full px-3 py-2 border rounded-lg" required>
+            <textarea placeholder="How can we help?" rows="4" class="w-full px-3 py-2 border rounded-lg" required></textarea>
+            <button class="w-full bg-indigo-600 text-white font-bold py-2 rounded-lg">Send Message</button>
+          </form>
+        </div>
       </div>
+    </section>
 
-      <div class="pt-2">
-        <label class="flex items-start gap-2 text-xs text-slate-600 cursor-pointer">
-          <input type="checkbox" required class="mt-0.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
-          <span>I agree to allow Bridge Wise to process my application details for University of Sunderland admissions.</span>
-        </label>
-
-        <button type="submit" class="w-full mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md hover:shadow-indigo-200 text-sm">
-          Submit Application & Claim £6,000 Scholarship
-        </button>
-      </div>
-
-    </form>
   </main>
 
-  <script>
-    // Extract ?ref= parameter on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const refCode = urlParams.get('ref');
+  <!-- Shared Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2026 Bridge Wise. Official Regional Recruiter for University of Sunderland.</p>
+      <div class="mt-4 md:mt-0 space-x-4">
+        <a href="#home" class="hover:text-white">Home</a>
+        <a href="#apply" class="hover:text-white">Apply</a>
+        <a href="#partner" class="hover:text-white">Agents</a>
+      </div>
+    </div>
+  </footer>
 
-      if (refCode) {
-        // Set hidden form input value
+  <!-- Single Page App Router Logic -->
+  <script>
+    function handleRouting() {
+      // Get hash from URL (e.g. "#apply?ref=123")
+      let fullHash = window.location.hash || '#home';
+      let pageId = fullHash.split('?')[0].replace('#', '');
+      
+      // Hide all pages, show target page
+      document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+      const targetPage = document.getElementById(pageId);
+      if(targetPage) {
+        targetPage.classList.add('active');
+        window.scrollTo(0, 0);
+      } else {
+        document.getElementById('home').classList.add('active'); // fallback
+      }
+
+      // Referral Code Extractor logic (Only runs if on #apply page)
+      if (pageId === 'apply' && fullHash.includes('?ref=')) {
+        const refCode = fullHash.split('?ref=')[1].split('&')[0];
         document.getElementById('referral_code').value = refCode;
-        
-        // Update display banner
         document.getElementById('refCodeDisplay').textContent = refCode;
         document.getElementById('referralBanner').classList.remove('hidden');
       }
-    });
-
-    // File Upload UI feedback helper
-    function updateFileList(input) {
-      const fileListContainer = document.getElementById('fileList');
-      fileListContainer.innerHTML = '';
-      if (input.files.length > 0) {
-        Array.from(input.files).forEach(file => {
-          const item = document.createElement('div');
-          item.className = 'flex items-center gap-1 text-indigo-700 font-medium';
-          item.innerHTML = `<i class="fa-solid fa-paperclip text-xs"></i> ${file.name}`;
-          fileListContainer.appendChild(item);
-        });
-      }
     }
-  </script>
 
+    // Listen for clicks on navigation links
+    window.addEventListener('hashchange', handleRouting);
+    
+    // Run on initial load
+    window.addEventListener('DOMContentLoaded', handleRouting);
+  </script>
 </body>
 </html>

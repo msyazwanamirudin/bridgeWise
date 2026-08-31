@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Now | Bridge Wise - University of Sunderland</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-800">
+
+  <header class="bg-white border-b border-slate-200 py-4 px-6 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-indigo-900 tracking-tight">Bridge<span class="text-amber-500">Wise</span></a>
+      <a href="https://wa.me/yourwhatsappnumber" target="_blank" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i> Need Help? Chat Us
+      </a>
+    </div>
+  </header>
+
+  <section class="bg-indigo-900 text-white py-8 px-6 text-center">
+    <span class="bg-amber-400 text-indigo-950 text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Intake Open 2026</span>
+    <h1 class="text-2xl md:text-3xl font-extrabold mt-3">University of Sunderland 1-Year Top-Up Application</h1>
+    <p class="text-indigo-200 text-sm mt-2">Guaranteed £6,000 Automatic Scholarship Applied Upon Eligibility Verification</p>
+  </section>
+
+  <main class="max-w-2xl mx-auto my-10 p-6 md:p-8 bg-white rounded-2xl shadow-lg border border-slate-100">
+    
+    <form id="applicationForm" action="/submit-application" method="POST" enctype="multipart/form-data" class="space-y-6">
+      
+      <input type="hidden" id="referral_code" name="referral_code" value="">
+
+      <div id="referralBanner" class="hidden bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium px-4 py-3 rounded-lg flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-emerald-500 text-base"></i>
+        <span>Referral Applied: <strong id="refCodeDisplay" class="font-bold"></strong></span>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-user text-indigo-600 mr-2"></i>Personal Details</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="full_name">Full Name (As per IC/Passport) *</label>
+            <input type="text" id="full_name" name="full_name" required placeholder="e.g. Tan Wei Ming" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="name@example.com" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="phone">WhatsApp / Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+60 12-345 6789" class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-graduation-cap text-indigo-600 mr-2"></i>Academic Selection</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="program">Intended Top-Up Program *</label>
+            <select id="program" name="program" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+              <option value="">Select Course</option>
+              <option value="business">Business & Management</option>
+              <option value="computing">Computing & IT</option>
+              <option value="engineering">Engineering</option>
+              <option value="hospitality">Hospitality & Tourism</option>
+              <option value="art">Art & Design</option>
+              <option value="nursing">Nursing & Health</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="intake">Target Intake *</label>
+            <select id="intake" name="intake" required class="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white">
+              <option value="sept_oct_2026">Sept/Oct 2026 (Includes Free Flight Offer)</option>
+              <option value="jan_2027">Jan/Feb 2027</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 border-b pb-2 mb-4"><i class="fa-solid fa-file-arrow-up text-indigo-600 mr-2"></i>Upload Transcripts (For Fast Review)</h2>
+        <p class="text-xs text-slate-500 mb-3">Upload your Diploma transcript to verify entry eligibility and IELTS waiver status.</p>
+        
+        <div class="border-2 border-dashed border-slate-300 rounded-lg p-4 text-center hover:bg-slate-50 transition cursor-pointer" onclick="document.getElementById('transcripts').click()">
+          <i class="fa-solid fa-cloud-arrow-up text-3xl text-indigo-500 mb-2"></i>
+          <p class="text-xs font-semibold text-slate-700">Click to upload Diploma Transcript / Passport</p>
+          <p class="text-[10px] text-slate-400 mt-1">PDF, PNG, or JPG (Max 10MB)</p>
+          <input type="file" id="transcripts" name="transcripts[]" multiple accept=".pdf,.png,.jpg,.jpeg" class="hidden" onchange="updateFileList(this)">
+        </div>
+        <div id="fileList" class="mt-2 text-xs text-slate-600 space-y-1"></div>
+      </div>
+
+      <div class="pt-2">
+        <label class="flex items-start gap-2 text-xs text-slate-600 cursor-pointer">
+          <input type="checkbox" required class="mt-0.5 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500">
+          <span>I agree to allow Bridge Wise to process my application details for University of Sunderland admissions.</span>
+        </label>
+
+        <button type="submit" class="w-full mt-6 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-xl transition duration-200 shadow-md hover:shadow-indigo-200 text-sm">
+          Submit Application & Claim £6,000 Scholarship
+        </button>
+      </div>
+
+    </form>
+  </main>
+
+  <script>
+    // Extract ?ref= parameter on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const refCode = urlParams.get('ref');
+
+      if (refCode) {
+        // Set hidden form input value
+        document.getElementById('referral_code').value = refCode;
+        
+        // Update display banner
+        document.getElementById('refCodeDisplay').textContent = refCode;
+        document.getElementById('referralBanner').classList.remove('hidden');
+      }
+    });
+
+    // File Upload UI feedback helper
+    function updateFileList(input) {
+      const fileListContainer = document.getElementById('fileList');
+      fileListContainer.innerHTML = '';
+      if (input.files.length > 0) {
+        Array.from(input.files).forEach(file => {
+          const item = document.createElement('div');
+          item.className = 'flex items-center gap-1 text-indigo-700 font-medium';
+          item.innerHTML = `<i class="fa-solid fa-paperclip text-xs"></i> ${file.name}`;
+          fileListContainer.appendChild(item);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

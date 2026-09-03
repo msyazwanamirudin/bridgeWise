@@ -1,6 +1,6 @@
 // ============================================================
 // Apply page — multi-step form controller
-// Steps: 1 Personal, 2 Academic, 3 Intake, 4 Documents
+// Steps: 1 Your Details, 2 Program & Documents
 // ============================================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -55,10 +55,13 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       return;
     }
+    if (typeof trackEvent === "function") {
+      trackEvent("apply_form_submit", {
+        track: document.getElementById("target_program") ? document.getElementById("target_program").value : ""
+      });
+    }
     const msg = document.getElementById("apply-msg");
     if (msg) {
-      // formsubmit.co handles the actual delivery; this just gives instant
-      // feedback before the browser navigates to the _next redirect.
       msg.textContent = "Submitting your application…";
       msg.classList.remove("error");
       msg.classList.add("show");

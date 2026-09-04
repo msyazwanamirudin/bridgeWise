@@ -1,0 +1,5 @@
+# Update the Sitemap URL below if the domain changes from what's live today.
+User-agent: *
+Allow: /
+
+Sitemap: https://bridge-wise.vercel.app/sitemap.xml

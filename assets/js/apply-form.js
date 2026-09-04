@@ -41,11 +41,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const config = window.EMAILJS_CONFIG || {};
-    if (!window.emailjs || !config.publicKey || config.publicKey.indexOf("YOUR_") === 0) {
+    const isPlaceholder = (v) => !v || v.indexOf("YOUR_") === 0;
+    const missing = [];
+    if (isPlaceholder(config.publicKey)) missing.push("Public Key");
+    if (isPlaceholder(config.serviceId)) missing.push("Service ID");
+    if (isPlaceholder(config.businessTemplateId)) missing.push("business Template ID");
+    if (isPlaceholder(config.applicantTemplateId)) missing.push("applicant Template ID");
+
+    if (!window.emailjs || missing.length) {
+      const detail = missing.length
+        ? "Still using placeholder value(s) for: " + missing.join(", ") + "."
+        : "The EmailJS script didn't load.";
       showMessage(
-        "Application sending isn't configured yet — please message us directly on WhatsApp so we don't lose your details.",
+        "Application sending isn't fully configured yet (" + detail + ") — please message us directly on WhatsApp so we don't lose your details.",
         "error"
       );
+      console.warn("EmailJS not configured:", detail);
       return;
     }
 
@@ -102,7 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = THANK_YOU_URL + "?" + params.toString();
       })
       .catch((err) => {
-        console.error("EmailJS send failed:", err);
+        const detail = err && (err.text || err.message) ? err.text || err.message : JSON.stringify(err);
+        console.error("EmailJS send failed — status:", err && err.status, "| detail:", detail);
         setSubmitting(false);
         showMessage(
           "Something went wrong sending your application. Please try again, or message us directly on WhatsApp so we don't lose your details.",

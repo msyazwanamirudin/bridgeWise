@@ -4,6 +4,15 @@
 
 const WHATSAPP_NUMBER = "60123039697"; // no +, no spaces, for wa.me links
 
+// Known referral agent codes. Add a new agent by adding a line here —
+// key is the exact code they'll share (case-insensitive to match), value
+// is the name shown on the badge and used in the recognized/unrecognized
+// check. This is the whole "validation list" — no backend, just this.
+const REFERRAL_AGENTS = {
+  "AGENT007": "Sample Agent — replace or remove this line",
+  // "AGENT123": "Ahmad bin Ali",
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   initPageFadeIn();
   initPageTransitions();
@@ -123,9 +132,33 @@ function initRefCapture() {
 
   if (stored) {
     if (visibleField && !visibleField.value) visibleField.value = stored;
+
+    // Case-insensitive lookup against the known agent list.
+    const matchKey = Object.keys(REFERRAL_AGENTS).find(
+      (k) => k.toLowerCase() === stored.toLowerCase()
+    );
+    const agentName = matchKey ? REFERRAL_AGENTS[matchKey] : null;
+
     if (displayBadge) {
       displayBadge.hidden = false;
-      displayBadge.querySelector("[data-ref-code]").textContent = stored;
+      const codeSlot = displayBadge.querySelector("[data-ref-code]");
+      if (agentName) {
+        displayBadge.classList.remove("unrecognized");
+        if (codeSlot) codeSlot.textContent = "Applying via agent referral: " + stored + " — " + agentName;
+      } else {
+        displayBadge.classList.add("unrecognized");
+        if (codeSlot) codeSlot.textContent = "Referral code " + stored + " noted — not a recognized agent code, but your application will still be submitted";
+      }
+    }
+
+    // Only log once per code per browser session, so revisiting pages
+    // doesn't spam duplicate events for the same visit.
+    if (ref && typeof trackEvent === "function" && sessionStorage.getItem("bw_ref_logged") !== ref) {
+      trackEvent("referral_code_captured", {
+        referral_code: ref,
+        recognized: Boolean(agentName),
+      });
+      sessionStorage.setItem("bw_ref_logged", ref);
     }
   }
 }

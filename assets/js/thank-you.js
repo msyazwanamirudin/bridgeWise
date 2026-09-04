@@ -68,4 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
   if (typeof trackEvent === "function") {
     trackEvent("thank_you_page_view", {});
   }
+
+  initAutoRedirect();
 });
+
+/* Auto-redirect to homepage after a visible countdown ------------------- */
+function initAutoRedirect() {
+  const countdownEl = document.getElementById("redirect-countdown");
+  if (!countdownEl) return;
+
+  let seconds = 12;
+  countdownEl.textContent = seconds;
+
+  const timer = setInterval(() => {
+    seconds -= 1;
+    if (seconds <= 0) {
+      clearInterval(timer);
+      window.location.href = "index.html";
+      return;
+    }
+    countdownEl.textContent = seconds;
+  }, 1000);
+}

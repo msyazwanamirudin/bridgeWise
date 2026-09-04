@@ -1,0 +1,72 @@
+<!--
+  SUBJECT LINE (paste into EmailJS "Subject" field, not the body):
+  Thanks for applying, {{full_name}} — BridgeWise Education Advisory
+
+  TO EMAIL (EmailJS template settings) — this is the critical part:
+  {{email}}
+  Must be set to the variable, not a fixed address, or every applicant's
+  confirmation will go to the same inbox instead of their own.
+
+  Paste everything below into the template's HTML/code editor.
+-->
+<div style="font-family: Arial, Helvetica, sans-serif; background-color:#FAF7F0; padding:24px; max-width:600px; margin:0 auto;">
+
+  <div style="background-color:#10233F; padding:32px 28px; border-radius:8px 8px 0 0; text-align:center;">
+    <img src="https://bridge-wise.vercel.app/assets/img/bridgewise-logo.png" alt="BridgeWise" width="46" style="margin-bottom:10px;">
+    <div style="color:#FAF7F0; font-size:20px; font-weight:bold;">BridgeWise Education Advisory</div>
+  </div>
+
+  <div style="background-color:#ffffff; padding:32px 28px; border:1px solid #DAD3C3; border-top:none;">
+
+    <h1 style="color:#10233F; font-size:23px; margin:0 0 14px; font-family: Georgia, 'Times New Roman', serif;">Thanks for applying, {{full_name}}.</h1>
+    <p style="color:#57616F; font-size:15px; line-height:1.7; margin:0 0 22px;">We've received your application &mdash; we'll connect with you shortly. Here's what you submitted:</p>
+
+    <table role="presentation" style="width:100%; border-collapse:collapse; background-color:#F1ECE1; border-radius:8px; font-size:14px;">
+      <tr>
+        <td style="padding:16px 20px 6px; color:#57616F;">Applying for</td>
+        <td style="padding:16px 20px 6px; color:#10233F; font-weight:700; text-align:right;">{{target_programme}}</td>
+      </tr>
+      <tr>
+        <td style="padding:0 20px 16px; color:#57616F;">University</td>
+        <td style="padding:0 20px 16px; color:#10233F; font-weight:700; text-align:right;">{{target_university}}</td>
+      </tr>
+    </table>
+
+    <p style="color:#10233F; font-size:15px; font-weight:700; margin:26px 0 8px;">What happens next</p>
+    <table role="presentation" style="width:100%; border-collapse:collapse; font-size:14.5px;">
+      <tr>
+        <td style="padding:6px 0; color:#C89B3C; font-weight:bold; width:22px; vertical-align:top;">1.</td>
+        <td style="padding:6px 0; color:#57616F; line-height:1.6;">A counsellor personally reviews your application</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0; color:#C89B3C; font-weight:bold; vertical-align:top;">2.</td>
+        <td style="padding:6px 0; color:#57616F; line-height:1.6;">We reach out within 1&ndash;2 business days to confirm your eligibility</td>
+      </tr>
+      <tr>
+        <td style="padding:6px 0; color:#C89B3C; font-weight:bold; vertical-align:top;">3.</td>
+        <td style="padding:6px 0; color:#57616F; line-height:1.6;">We walk through your options together on a free consultation call</td>
+      </tr>
+    </table>
+
+    <div style="text-align:center; margin:30px 0 8px;">
+      <a href="https://wa.me/60123039697" style="display:inline-block; background-color:#1E8F5A; color:#ffffff; font-weight:bold; text-decoration:none; padding:14px 30px; border-radius:4px; font-size:15px;">Message Us on WhatsApp</a>
+    </div>
+    <p style="color:#57616F; font-size:12.5px; text-align:center; margin:0;">Want it looked at sooner? A WhatsApp message usually gets the fastest reply.</p>
+
+    <table role="presentation" style="width:100%; border-collapse:collapse; margin-top:28px; border-top:1px solid #DAD3C3;">
+      <tr>
+        <td style="padding-top:20px; color:#8B6314; font-size:14px; font-style:italic; font-family: Georgia, 'Times New Roman', serif; line-height:1.6;">
+          "Understand the student first. Then find the pathway."<br>
+          <span style="color:#57616F; font-style:normal; font-size:12.5px;">&mdash; Zarina Abdul Latif, Education Advisor &amp; Consultant</span>
+        </td>
+      </tr>
+    </table>
+
+  </div>
+
+  <div style="background-color:#10233F; padding:16px 28px; border-radius:0 0 8px 8px; text-align:center;">
+    <p style="color:rgba(250,247,240,0.6); font-size:11.5px; margin:0 0 4px;">BridgeWise Education Advisory</p>
+    <p style="color:rgba(250,247,240,0.45); font-size:11px; margin:0;">bridgewise.education@gmail.com &middot; Bangi / Kajang &amp; Online</p>
+  </div>
+
+</div>

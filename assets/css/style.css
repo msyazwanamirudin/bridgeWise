@@ -1132,6 +1132,130 @@ html.js .reveal.in{ opacity: 1; transform: none; }
 }
 .referral-badge:not([hidden]){ display: inline-flex; }
 
+/* ---------- Hero: tagline + countries line ---------- */
+.hero-tagline{
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 21px);
+  color: var(--gold);
+  margin-top: 12px;
+}
+.hero-countries{
+  display: inline-flex;
+  margin-top: 24px;
+  padding: 8px 16px;
+  background: rgba(200,155,60,0.14);
+  border: 1px solid rgba(200,155,60,0.4);
+  border-radius: 100px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* ---------- Pathway grid (Find the Right Pathway) ---------- */
+.pathway-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px){ .pathway-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px){ .pathway-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- Destination cards ---------- */
+.destination-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.destination-card{
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.destination-card:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(16,35,63,0.1); }
+.destination-card img{ width: 100%; height: 170px; object-fit: cover; }
+.destination-card-body{ padding: 20px 22px; }
+.destination-card h3{ font-size: 17px; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+.destination-card p{ font-size: 14px; color: var(--slate); }
+@media (max-width: 900px){ .destination-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px){ .destination-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- Zarina / advisor bio card ---------- */
+.advisor-card{
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 32px;
+}
+.advisor-photo-placeholder{
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--paper-dim);
+  border: 1.5px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  padding: 12px;
+}
+.advisor-photo-placeholder .initials{
+  font-family: var(--font-display);
+  font-size: 32px;
+  color: var(--bridge);
+}
+.advisor-photo-placeholder .note{ font-size: 10.5px; color: var(--slate); line-height: 1.3; }
+.advisor-name{ font-family: var(--font-display); font-size: 22px; }
+.advisor-role{ font-size: 13.5px; color: var(--bridge); font-weight: 600; margin-top: 2px; margin-bottom: 14px; }
+.advisor-bio p{ color: var(--slate); font-size: 14.5px; line-height: 1.7; margin-bottom: 10px; }
+.advisor-bio strong{ color: var(--ink); }
+@media (max-width: 640px){
+  .advisor-card{ grid-template-columns: 1fr; text-align: center; }
+  .advisor-photo-placeholder{ width: 140px; margin: 0 auto; }
+}
+
+/* ---------- Process steps (How We Help) ---------- */
+.process-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px 24px;
+}
+.process-step{
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-navy);
+}
+.process-step .pnum{
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  width: 34px;
+}
+.process-step .plabel{ font-size: 15px; color: var(--white); font-weight: 500; }
+@media (max-width: 900px){ .process-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){ .process-grid{ grid-template-columns: 1fr; } }
+
+/* ---------- Pathway sub-heading (used inside Featured Pathway cluster) ---------- */
+.subsection-label{
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--bridge);
+  margin-bottom: 10px;
+}
+
 /* Utility */
 .mt-8{ margin-top: 8px; } .mt-16{ margin-top: 16px; } .mt-24{ margin-top: 24px; } .mt-40{ margin-top: 40px; }
 .text-center{ text-align: center; }

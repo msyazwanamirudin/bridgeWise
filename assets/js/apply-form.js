@@ -54,6 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
       return el ? el.value.trim() : "";
     };
 
+    const now = new Date();
+    const submittedAt = now.toLocaleString("en-MY", {
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+
     const templateParams = {
       full_name: val("full_name"),
       phone: val("phone"),
@@ -63,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       target_university: val("target_university"),
       target_programme: val("target_programme"),
       referral_code: val("referral_code") || "None",
+      submitted_at: submittedAt,
     };
 
     setSubmitting(true);

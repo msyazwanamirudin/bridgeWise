@@ -9,7 +9,11 @@ const WHATSAPP_NUMBER = "60123039697"; // no +, no spaces, for wa.me links
 // is the name shown on the badge and used in the recognized/unrecognized
 // check. This is the whole "validation list" — no backend, just this.
 const REFERRAL_AGENTS = {
-  "AGENT007": "Sample Agent — replace or remove this line",
+  "AGENT000": "Wan",
+  "AGENT001": "Amir",
+  "AGENT002": "Iskandar",
+  "AGENT003": "Uwais",
+  "AGENT004": "Zarina",
   // "AGENT123": "Ahmad bin Ali",
 };
 

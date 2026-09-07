@@ -9,11 +9,7 @@ const WHATSAPP_NUMBER = "60123039697"; // no +, no spaces, for wa.me links
 // is the name shown on the badge and used in the recognized/unrecognized
 // check. This is the whole "validation list" — no backend, just this.
 const REFERRAL_AGENTS = {
-  "AGENT000": "Wan",
-  "AGENT001": "Amir",
-  "AGENT002": "Iskandar",
-  "AGENT003": "Uwais",
-  "AGENT004": "Zarina",
+  "AGENT007": "Sample Agent — replace or remove this line",
   // "AGENT123": "Ahmad bin Ali",
 };
 
@@ -22,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initPageTransitions();
   initNavToggle();
   initNavDropdown();
+  initThemeToggle();
   initWhatsappLinks();
   initRefCapture();
   initYear();
@@ -30,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFaq();
   initCountUp();
   initSectionNav();
+  initBottomNav();
 });
 
 /* Analytics helper — safe no-op if GA4 / Meta Pixel aren't configured yet.
@@ -91,6 +89,57 @@ function initNavToggle() {
   toggle.addEventListener("click", () => {
     const open = links.classList.toggle("open");
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
+/* Dark / light theme toggle ---------------------------------------------- */
+function initThemeToggle() {
+  const btns = document.querySelectorAll(".theme-toggle");
+  if (!btns.length) return;
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      if (isLight) {
+        document.documentElement.removeAttribute("data-theme");
+        try { localStorage.setItem("bw_theme", "dark"); } catch (e) {}
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        try { localStorage.setItem("bw_theme", "light"); } catch (e) {}
+      }
+      if (typeof trackEvent === "function") {
+        trackEvent("theme_toggle", { theme: isLight ? "dark" : "light" });
+      }
+    });
+  });
+}
+
+/* Mobile bottom nav + More sheet ------------------------------------------ */
+function initBottomNav() {
+  const moreToggle = document.getElementById("more-tab-toggle");
+  const sheet = document.getElementById("more-sheet");
+  const backdrop = document.getElementById("more-sheet-backdrop");
+
+  if (moreToggle && sheet && backdrop) {
+    function openSheet() {
+      sheet.classList.add("open");
+      backdrop.classList.add("open");
+      moreToggle.classList.add("active");
+    }
+    function closeSheet() {
+      sheet.classList.remove("open");
+      backdrop.classList.remove("open");
+      moreToggle.classList.remove("active");
+    }
+    moreToggle.addEventListener("click", () => {
+      if (sheet.classList.contains("open")) closeSheet();
+      else openSheet();
+    });
+    backdrop.addEventListener("click", closeSheet);
+  }
+
+  const path = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".bottom-nav-item[data-page]").forEach((item) => {
+    if (item.getAttribute("data-page") === path) item.classList.add("active");
   });
 }
 

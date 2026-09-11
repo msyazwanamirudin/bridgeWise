@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=9">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 <link rel="icon" type="image/png" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
@@ -30,7 +30,7 @@
   // Apply saved theme before paint, so there is no flash of the wrong theme.
   try {
     var savedTheme = localStorage.getItem('bw_theme');
-    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    if (savedTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
   } catch (e) {}
   setTimeout(function(){
     var els = document.querySelectorAll('.reveal');
@@ -404,6 +404,46 @@
   </div>
 </section>
 
+<!-- ============ FEATURED PATHWAY: cost estimate ============ -->
+<section>
+  <div class="wrap">
+    <div class="subsection-label text-center">Diploma &rarr; Degree</div>
+    <div class="section-head center-head reveal">
+      <h2>Estimate your cost</h2>
+      <p>A starting point, not a quote &mdash; tuition and scholarship figures change by intake. Treat this as a ballpark and confirm exact terms with us before you commit.</p>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-row">
+        <span class="calc-label">Top-Up tuition (1 year)</span>
+        <span class="calc-value">&pound;[8,000] &ndash; &pound;[10,000] <span class="placeholder-note">Placeholder</span></span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">Scholarship (if eligible)</span>
+        <span class="calc-value calc-negative">&ndash; up to &pound;[2,000] <span class="placeholder-note">Placeholder</span></span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">UK living costs<br><span class="calc-sublabel">Official visa maintenance requirement, outside London, 9 months</span></span>
+        <span class="calc-value">&pound;10,539</span>
+      </div>
+      <div class="calc-row">
+        <span class="calc-label">Flight<br><span class="calc-sublabel">Sept/Oct intake only</span></span>
+        <span class="calc-value">Included</span>
+      </div>
+      <div class="calc-total-row">
+        <span class="calc-label">Estimated total range</span>
+        <span class="calc-total-value">&pound;[16,539] &ndash; &pound;[18,539] <span class="placeholder-note">Placeholder</span></span>
+      </div>
+    </div>
+
+    <p class="hint text-center mt-16" style="max-width:640px; margin-left:auto; margin-right:auto;">The living cost figure is the UK Home Office's official Student visa maintenance requirement (outside London, current rate as of September 2026) &mdash; <a href="https://www.gov.uk/student-visa/money" target="_blank" style="color:var(--bridge); font-weight:600;">gov.uk</a>. It's confirmed to rise to &pound;1,203/month (&pound;10,827 for 9 months) from 30 November 2026. Tuition and scholarship figures above are placeholders pending this intake's confirmed terms.</p>
+
+    <div class="text-center mt-24">
+      <a href="#" class="btn btn-gold" data-wa data-wa-msg="Hi BridgeWise, can you confirm the exact tuition and scholarship figures for this intake?">Confirm Exact Figures on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FEATURED PATHWAY: comparison ============ -->
 <section class="section-alt">
   <div class="wrap">
@@ -438,41 +478,61 @@
       <h2>Top-Up success stories</h2>
       <p>A few of the diploma holders BridgeWise has placed into the UK Top-Up route.</p>
     </div>
-    <div class="testi-grid">
+    <div class="testi-carousel" id="testi-carousel">
+      <button type="button" class="testi-arrow testi-prev" aria-label="Previous story">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
 
-      <div class="testi-card">
-        <p class="testi-quote">"I was worried a 1-year top-up meant a 'lesser' degree. It's not &mdash; my certificate says Sunderland, same as a 3-year student. The scholarship covered nearly two semesters of tuition."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-eng.jpg" alt="Portrait of Amirul, Mechanical Engineering Top-Up student" loading="lazy">
-          <div>
-            <div class="testi-name">Amirul, 23</div>
-            <div class="testi-role">Mechanical Engineering &middot; Diploma from German-Malaysian Institute</div>
+      <div class="testi-track">
+        <div class="testi-slide active">
+          <div class="testi-card">
+            <p class="testi-quote">"I was worried a 1-year top-up meant a 'lesser' degree. It's not &mdash; my certificate says Sunderland, same as a 3-year student. The scholarship covered nearly two semesters of tuition."</p>
+            <div class="testi-person">
+              <img src="assets/img/student-eng.jpg" alt="Portrait of Amirul, Mechanical Engineering Top-Up student" loading="lazy">
+              <div>
+                <div class="testi-name">Amirul, 23</div>
+                <div class="testi-role">Mechanical Engineering &middot; Diploma from German-Malaysian Institute</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-slide">
+          <div class="testi-card">
+            <p class="testi-quote">"The IELTS waiver was the deciding factor for me &mdash; I'd already sat for it twice. BridgeWise's counsellor checked my eligibility over WhatsApp before I even paid the application fee."</p>
+            <div class="testi-person">
+              <img src="assets/img/student-biz.jpg" alt="Portrait of Nur Athirah, Business Management Top-Up student" loading="lazy">
+              <div>
+                <div class="testi-name">Nur Athirah, 22</div>
+                <div class="testi-role">Business Management &middot; Diploma from a Malaysian polytechnic</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-slide">
+          <div class="testi-card">
+            <p class="testi-quote">"Instalments made it possible for my parents to say yes. We paid per semester instead of one lump sum, and the free flight for the September intake covered the one cost we hadn't budgeted for."</p>
+            <div class="testi-person">
+              <img src="assets/img/student-comp.jpg" alt="Portrait of Danial, Computing Top-Up student" loading="lazy">
+              <div>
+                <div class="testi-name">Danial, 24</div>
+                <div class="testi-role">Computing &middot; Diploma in Information Technology</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="testi-card">
-        <p class="testi-quote">"The IELTS waiver was the deciding factor for me &mdash; I'd already sat for it twice. BridgeWise's counsellor checked my eligibility over WhatsApp before I even paid the application fee."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-biz.jpg" alt="Portrait of Nur Athirah, Business Management Top-Up student" loading="lazy">
-          <div>
-            <div class="testi-name">Nur Athirah, 22</div>
-            <div class="testi-role">Business Management &middot; Diploma from a Malaysian polytechnic</div>
-          </div>
-        </div>
-      </div>
+      <button type="button" class="testi-arrow testi-next" aria-label="Next story">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
 
-      <div class="testi-card">
-        <p class="testi-quote">"Instalments made it possible for my parents to say yes. We paid per semester instead of one lump sum, and the free flight for the September intake covered the one cost we hadn't budgeted for."</p>
-        <div class="testi-person">
-          <img src="assets/img/student-comp.jpg" alt="Portrait of Danial, Computing Top-Up student" loading="lazy">
-          <div>
-            <div class="testi-name">Danial, 24</div>
-            <div class="testi-role">Computing &middot; Diploma in Information Technology</div>
-          </div>
-        </div>
+      <div class="testi-dots">
+        <button type="button" class="testi-dot active" data-slide="0" aria-label="Story 1"></button>
+        <button type="button" class="testi-dot" data-slide="1" aria-label="Story 2"></button>
+        <button type="button" class="testi-dot" data-slide="2" aria-label="Story 3"></button>
       </div>
-
     </div>
   </div>
 </section>
@@ -667,7 +727,7 @@
   <a href="contact.html" class="btn btn-gold btn-block">Book a Free Consultation</a>
 </div>
 
-<script src="assets/js/main.js?v=9"></script>
-<script src="assets/js/quiz.js?v=9"></script>
+<script src="assets/js/main.js?v=12"></script>
+<script src="assets/js/quiz.js?v=10"></script>
 </body>
 </html>

@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountUp();
   initSectionNav();
   initBottomNav();
+  initTestiCarousel();
 });
 
 /* Analytics helper — safe no-op if GA4 / Meta Pixel aren't configured yet.
@@ -98,19 +99,61 @@ function initThemeToggle() {
   if (!btns.length) return;
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const isLight = document.documentElement.getAttribute("data-theme") === "light";
-      if (isLight) {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      if (isDark) {
         document.documentElement.removeAttribute("data-theme");
-        try { localStorage.setItem("bw_theme", "dark"); } catch (e) {}
-      } else {
-        document.documentElement.setAttribute("data-theme", "light");
         try { localStorage.setItem("bw_theme", "light"); } catch (e) {}
+      } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        try { localStorage.setItem("bw_theme", "dark"); } catch (e) {}
       }
       if (typeof trackEvent === "function") {
-        trackEvent("theme_toggle", { theme: isLight ? "dark" : "light" });
+        trackEvent("theme_toggle", { theme: isDark ? "light" : "dark" });
       }
     });
   });
+}
+
+/* Testimonial carousel ---------------------------------------------------- */
+function initTestiCarousel() {
+  const carousel = document.getElementById("testi-carousel");
+  if (!carousel) return;
+
+  const slides = Array.from(carousel.querySelectorAll(".testi-slide"));
+  const dots = Array.from(carousel.querySelectorAll(".testi-dot"));
+  const prevBtn = carousel.querySelector(".testi-prev");
+  const nextBtn = carousel.querySelector(".testi-next");
+  let current = 0;
+  let timer = null;
+
+  function show(index) {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle("active", i === current));
+    dots.forEach((d, i) => d.classList.toggle("active", i === current));
+  }
+
+  function next() { show(current + 1); }
+  function prev() { show(current - 1); }
+
+  function startAuto() {
+    stopAuto();
+    timer = setInterval(next, 6000);
+  }
+  function stopAuto() {
+    if (timer) clearInterval(timer);
+  }
+
+  if (nextBtn) nextBtn.addEventListener("click", () => { next(); startAuto(); });
+  if (prevBtn) prevBtn.addEventListener("click", () => { prev(); startAuto(); });
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => { show(i); startAuto(); });
+  });
+
+  carousel.addEventListener("mouseenter", stopAuto);
+  carousel.addEventListener("mouseleave", startAuto);
+
+  show(0);
+  startAuto();
 }
 
 /* Mobile bottom nav + More sheet ------------------------------------------ */
